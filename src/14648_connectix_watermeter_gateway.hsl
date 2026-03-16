@@ -1,0 +1,36 @@
+5000|"IOT Device Data\Connectix Watermeter Gateway"|0|3|"Gateway Host Address"|"Gateway Port"|"Read Interval"|13|"MAC Address"|"Gateway Model"|"Startup Time"|"Firmware Running"|"Firmware Available (Y/N)"|"Firmware Update Available (0 = False, 1 = True)"|"WiFi RSSI"|"MQTT Configured (0 = False, 1 = True)"|"Watermeter Pulse Factor"|"Watermeter Value"|"Watermeter Used Last Minute"|"Watermeter Pulse Count"|"Leak Detected (0 = False, 1 = True)"|"0.1.0"|0|0
+5001|3|13|1|0|1|0|"HSL3.main.connectix_watermeter_gateway"
+5002|1|"connectix_watermeter.local"|1
+5002|2|82|0
+5002|3|60|0
+5004|1|"00_00_00_00_00_00"|0|1|1
+5004|2|"connectix_watermeter_gateway_v1.0 - A"|0|1|1
+5004|3|"5-01-2026 06:03:16"|0|1|1
+5004|4|"03-07-2025 v1"|0|1|1
+5004|5|"03-07-2025 v1"|0|1|1
+5004|6|0|0|1|0
+5004|7|0|0|1|0
+5004|8|0|0|1|0
+5004|9|0|0|1|0
+5004|10|0|0|1|0
+5004|11|0.0|0|1|0
+5004|12|0|0|1|0
+5004|13|0|0|1|0
+5012|0|""|"HSL3.set_input_name(1, 'IN01_HOST')"|""|0|0|0|0
+5012|0|""|"HSL3.set_input_name(2, 'IN02_PORT')"|""|0|0|0|0
+5012|0|""|"HSL3.set_input_name(3, 'IN03_READ_INTERVAL')"|""|0|0|0|0
+5012|0|""|"HSL3.set_timer_name(1, 'TIME01_READ_GATEWAY')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(1, 'OUT01_MAC_ADDRESS')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(2, 'OUT02_MODEL')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(3, 'OUT03_STARTUP_TIME')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(4, 'OUT04_FIRMWARE_RUNNING')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(5, 'OUT05_FIRMWARE_AVAILABLE')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(6, 'OUT06_FIRMWARE_UPDATE_AVAILABLE')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(7, 'OUT07_WIFI_RSSI')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(8, 'OUT08_MQTT_CONFIGURED')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(9, 'OUT09_WATERMETER_PULSE_FACTOR')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(10, 'OUT10_WATERMETER_VALUE')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(11, 'OUT11_WATERMETER_USED_LAST_MINUTE')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(12, 'OUT12_WATERMETER_PULSECOUNT')"|""|0|0|0|0
+5012|0|""|"HSL3.set_output_name(13, 'OUT13_LEAK_DETECT')"|""|0|0|0|0
+5012|0|""|"HSL3.load('hsl3_14648_connectix_watermeter_gateway', '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')"|""|0|0|0|0

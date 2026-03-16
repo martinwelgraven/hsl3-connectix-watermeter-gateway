@@ -1,0 +1,155 @@
+{
+    "module": {
+        "id": "14648",
+        "name": "Connectix Watermeter Gateway",
+        "version": "0.1.0",
+        "version_date": "2026-03-14",
+        "description": "This Logic Node connects to the Connectix Watermeter Gateway and retrieves various data such as watermeter values, firmware information, and leak detection status.",
+        "warning": "",
+        "note": "",
+        "category": "IOT Device Data",
+        "context": "connectix_watermeter_gateway",
+        "hsl_filename": "14648_connectix_watermeter_gateway.hsl",
+        "inputs": [
+            {
+                "type": "string",
+                "identifier": "IN01_HOST",
+                "init_value": "connectix_watermeter.local",
+                "label": "Gateway Host Address",
+                "description": "The host address of the Connectix Watermeter Gateway."
+            },
+            {
+                "type": "number",
+                "identifier": "IN02_PORT",
+                "init_value": 82,
+                "label": "Gateway Port",
+                "description": "The port of the Connectix Watermeter Gateway."
+            },
+            {
+                "type": "number",
+                "identifier": "IN03_READ_INTERVAL",
+                "init_value": 60,
+                "label": "Read Interval",
+                "description": "The interval at which the Connectix Watermeter Gateway reads data."
+            }
+        ],
+        "outputs": [
+            {
+                "type": "string",
+                "identifier": "OUT01_MAC_ADDRESS",
+                "init_value": "00_00_00_00_00_00",
+                "sbc": "s",
+                "label": "MAC Address",
+                "description": "The MAC address."
+            },
+            {
+                "type": "string",
+                "identifier": "OUT02_MODEL",
+                "init_value": "connectix_watermeter_gateway_v1.0 - A",
+                "sbc": "s",
+                "label": "Gateway Model",
+                "description": "The name of the model."
+            },
+            {
+                "type": "string",
+                "identifier": "OUT03_STARTUP_TIME",
+                "init_value": "5-01-2026 06:03:16",
+                "sbc": "s",
+                "label": "Startup Time",
+                "description": "A timestamp of when the gateway started up."
+            },
+            {
+                "type": "string",
+                "identifier": "OUT04_FIRMWARE_RUNNING",
+                "init_value": "03-07-2025 v1",
+                "sbc": "s",
+                "label": "Firmware Running",
+                "description": "The current firmware version."
+            },
+            {
+                "type": "string",
+                "identifier": "OUT05_FIRMWARE_AVAILABLE",
+                "init_value": "03-07-2025 v1",
+                "sbc": "s",
+                "label": "Firmware Available (Y/N)",
+                "description": "The latest firmware available."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT06_FIRMWARE_UPDATE_AVAILABLE",
+                "init_value": 0,
+                "sbc": "s",
+                "label": "Firmware Update Available (0 = False, 1 = True)",
+                "description": "Indication on availability of firmware update (0 = False, 1 = True)."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT07_WIFI_RSSI",
+                "init_value": 0,
+                "sbc": "s",
+                "label": "WiFi RSSI",
+                "description": "The WiFi signal strength (RSSI)."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT08_MQTT_CONFIGURED",
+                "init_value": 0,
+                "sbc": "s",
+                "label": "MQTT Configured (0 = False, 1 = True)",
+                "description": "Indication of whether MQTT is configured (0 = False, 1 = True)."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT09_WATERMETER_PULSE_FACTOR",
+                "init_value": 0,
+                "sbc": "s",
+                "label": "Watermeter Pulse Factor",
+                "description": "The pulse factor."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT10_WATERMETER_VALUE",
+                "init_value": 0,
+                "sbc": "s",
+                "label": "Watermeter Value",
+                "description": "The latest current watermeter value read."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT11_WATERMETER_USED_LAST_MINUTE",
+                "init_value": 0.0,
+                "sbc": "s",
+                "label": "Watermeter Used Last Minute",
+                "description": "The amount of water used in the last minute."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT12_WATERMETER_PULSECOUNT",
+                "init_value":0,
+                "sbc": "s",
+                "label": "Watermeter Pulse Count",
+                "description": "The total pulse count of the watermeter."
+            },
+            {
+                "type": "number",
+                "identifier": "OUT13_LEAK_DETECT",
+                "init_value": 0,
+                "sbc": "s",
+                "label": "Leak Detected (0 = False, 1 = True)",
+                "description": "Indication of whether a leak is detected (0 = False, 1 = True)."
+            }
+        ],
+        "timers": [
+            {
+                "identifier": "TIME01_READ_GATEWAY",
+                "description": "The polling time for the gateway."
+            }
+        ],
+        "scripts": [
+            {
+                "filename": "hsl3_14648_connectix_watermeter_gateway.py"
+            }
+        ],
+        "translations": []
+    }
+}

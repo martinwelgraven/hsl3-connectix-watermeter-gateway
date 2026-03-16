@@ -1,0 +1,53 @@
+# Auto-generated Python file
+
+import os
+import sys
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if ROOT_DIR not in sys.path:
+	sys.path.insert(0, ROOT_DIR)
+if os.path.join(ROOT_DIR, "src") not in sys.path:
+	sys.path.insert(0, os.path.join(ROOT_DIR, "src"))
+
+from hsl3.hsl3 import Hsl3Framework
+
+from hsl3.hsl3_wrapper import Hsl3WrapperModule
+from hsl3_14648_connectix_watermeter_gateway import LogicModule
+
+json_file = "config_connectix-watermeter-gateway.json"
+
+def main():
+
+	if sys.platform == "win32":
+		os.system('cls')
+	else:
+		os.system('clear')
+
+	print(" === Starting test for 14648 - Connectix Watermeter Gateway === ")
+	print("")
+
+	hsl3fw = Hsl3Framework("14648_connectix_watermeter_gateway")
+	logic_module = LogicModule(hsl3fw)
+
+	wrapper_node = Hsl3WrapperModule(os.path.join(ROOT_DIR, 'src', json_file), logic_module) # type: ignore
+	
+	
+	
+	if (wrapper_node.config is not None):
+		hsl3fw.config = wrapper_node.config
+
+	wrapper_node.set_input_value("IN01_HOST", "connectix_watermeter.local")
+	wrapper_node.set_input_value("IN02_PORT", 82)
+	wrapper_node.set_input_value("IN03_READ_INTERVAL", 60)
+
+	print("")
+
+	print(" === DEBUG LOG ===")
+	print("")
+
+	logic_module.debug.print_log()
+
+	
+if __name__ == "__main__":
+	main()
